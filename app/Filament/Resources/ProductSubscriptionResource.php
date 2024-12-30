@@ -45,6 +45,11 @@ class ProductSubscriptionResource extends Resource
 
     protected static ?string $navigationGroup = 'Transactions';
 
+    public static function getNavigationBadge(): ?string
+    {
+        return (string) ProductSubscription::where('is_paid', false)->count();
+    }
+
     public static function form(Form $form): Form
     {
         return $form->schema([
