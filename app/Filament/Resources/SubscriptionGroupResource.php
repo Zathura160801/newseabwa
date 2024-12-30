@@ -27,6 +27,8 @@ use App\Filament\Resources\SubscriptionGroupResource\RelationManagers;
 use App\Filament\Resources\SubscriptionGroupResource\Pages\EditSubscriptionGroup;
 use App\Filament\Resources\SubscriptionGroupResource\Pages\ListSubscriptionGroups;
 use App\Filament\Resources\SubscriptionGroupResource\Pages\CreateSubscriptionGroup;
+use App\Filament\Resources\SubscriptionGroupResource\RelationManagers\GroupMessagesRelationManager;
+use App\Filament\Resources\SubscriptionGroupResource\RelationManagers\GroupParticipantsRelationManager;
 
 class SubscriptionGroupResource extends Resource
 {
@@ -123,7 +125,8 @@ class SubscriptionGroupResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            GroupMessagesRelationManager::class,
+            GroupParticipantsRelationManager::class,
         ];
     }
 
