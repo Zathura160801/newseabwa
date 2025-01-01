@@ -8,6 +8,7 @@ use App\Models\ProductSubscription;
 use App\Http\Requests\StoreBookingRequest;
 use App\Http\Requests\StorePaymentRequest;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreCheckBookingRequest;
 
 class BookingController extends Controller
 {
@@ -79,6 +80,6 @@ class BookingController extends Controller
             return view('booking.check_booking_details', $bookingData);
         }
 
-        return redirect()->route('booking.check_booking')->withErrors(['error' => 'Transaction not found']);
+        return redirect()->route('front.check_booking')->withErrors(['error' => 'Transaction not found']);
     }
 }
