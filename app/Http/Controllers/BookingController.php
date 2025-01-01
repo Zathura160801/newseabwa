@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Services\BookingService;
 use App\Models\ProductSubscription;
-use App\Requests\StoreBookingRequest;
+use App\Http\Requests\StoreBookingRequest;
 use App\Http\Requests\StorePaymentRequest;
 use Illuminate\Http\Request;
 
