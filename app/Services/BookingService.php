@@ -34,7 +34,7 @@ class BookingService
             'sub_total'         => $price,
             'total_ppn'         => $totalPpn,
             'total_amount'      => $totalAmount,
-        ]
+        ];
     }
 
     public function storeBookingInSession($product, $validatedData)
